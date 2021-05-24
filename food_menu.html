@@ -1,0 +1,632 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>منوی کامل غذا</title>
+
+<link rel="stylesheet" type="text/css" href="styles/base.css" />
+<link rel="stylesheet" type="text/css" href="styles/header-wrrapper.css" />
+<link rel="stylesheet" type="text/css" href="styles/menu.css" />
+<link rel="stylesheet" type="text/css" href="styles/full_menu_accardion.css" />
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/base.js"></script>
+
+<style>
+
+
+#show_box {
+            
+
+}
+
+
+.items {
+            width: 800px;
+			min-height: 140px;
+            border: 1px solid #E9E9E9;
+            border-radius: 1px;
+            background: rgba(255,255,255,0.8);
+			box-shadow: 0px 0px 5px 2px rgba(170, 170, 170, 0.5);
+            padding: 30px;
+            margin: 15px auto
+        }
+
+
+
+            .items:hover {
+                
+				box-shadow: 0px 0px 10px 2px rgba(205, 205, 205, 0.5) inset;
+            }
+			
+			span#title{
+				display: block;
+				width: 866px;
+				margin: 20px auto 25px;
+				height: 35px;
+				line-height: 35px;
+				border: solid 1px #ECECEC;	
+				font-family: mjFlow;
+				font-size: 16px;
+				font-weight: 600;
+				color: #9c0;
+				text-indent: 25px;
+				box-shadow: 0 0 5px #ccc inset;
+				text-shadow: 2px 2px 5px #ccc;
+				background: linear-gradient(rgba(149,149,149,1) 5%, rgba(1,1,1,1) 40%, rgba(13,13,13,1) 46%, 
+				rgba(10,10,10,1) 47%, rgba(78,78,78,1) 63%, rgba(56,56,56,1) 86%, rgba(27,27,27,1) 100%);
+				box-shadow: 0px 0px 5px 1px #C8C8C8;
+				transition: 0.6s;
+			}
+			
+			
+			.items div {
+				float: right;
+				margin-left: 30px;			
+			}
+			
+			.items div:nth-child(3){
+				padding: 10px 20px;
+				background: url("images/verticalseparator.png") no-repeat;
+				background-position: right center;
+			}
+			
+            .items img {
+                 width: 120px;
+                 height: 100px;
+                 padding: 3px;
+                 background: rgba(255,255,255,0.8);
+				 border: 1px solid #eee;
+				 box-shadow: 0px 0px 5px 1px rgba(205, 205, 205, 0.5);
+                 border-radius: 5px;
+                 margin-right: 10px;
+				 margin-top: 8px;
+				 transition: 0.8s;
+            }
+
+			.items img:hover {
+				transform: rotate(360deg);
+				border-radius: 100%;
+			}
+			
+			
+            .items p {
+				color: #888;
+				line-height: 50px;
+                font-family: b morvarid;
+            }
+
+            .items span, .items h2 {
+                display: block;
+                height: 28px;
+                direction: rtl;               
+                font-family: b morvarid;
+                color: #ccc;
+                text-align: right;
+                margin-bottom: 10px;
+                
+                
+            }
+
+                .items h2 {
+				
+					//background: url("images/spacer-footer.png") no-repeat;
+					//background-position: bottom center;
+                    border-bottom: 1px solid #eee;
+                    color: #9c0;
+                    font-size: 15px;
+                    font-weight: 600;    
+					clear: both;
+					text-indent: 10px;
+					transition: 0.6s;
+                }
+				
+				.items h2:hover {
+					font-size: 16px;
+					padding-right: 10px;
+				}
+				
+                .items span#food_price {
+                    
+                    color: #f06;
+                    font-size: 14px; 
+                    font-weight: 100;
+                    margin: 15px 0px;                 
+                }
+				
+
+        
+        .items a {
+            text-decoration: none;
+        }
+
+
+        .items.hide {
+            opacity: 0;
+        }
+
+        .items.show {
+            opacity: 0.9;
+            animation: s2 2s ease-in-out;
+        }
+
+        @keyframes s1 {
+            0% {
+                transform: translateX(100%) skewX(-30deg);
+                opacity: 0;
+            }
+
+            60% {
+                transform: translateX(-20px) skewX(30deg);
+                opacity: 1;
+            }
+
+            80% {
+                transform: translateX(0%) skewX(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(0%) skewX(0deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes s2 {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+		
+		
+		.items:nth-child(2n){
+	
+		//margin-left: -1000px;
+		//transition:2s;
+
+	}
+
+		.items:nth-child(2n+1) {
+	
+		//margin-right: -1000px;
+		//transition:2s;
+	}
+
+		#accardion input[id*=rad]:checked ~ .content > .items:nth-child(2n) {
+
+		//margin-left: 5px;
+	}
+		
+	#accardion input[id*=rad]:checked ~ .content > .items:nth-child(2n+1) {
+
+		//margin-right: 5px;
+	}
+
+	
+
+</style>
+
+	
+</head>
+<body>
+<div id="to_top">
+	<a href="#header"><div id="top"></div></a>
+</div>  <!--to_top -->
+
+
+<div id="header">
+
+	
+	<div class="header-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <h1>
+                        <a href="index.html">
+                            <span class="main">
+								<span class="first">S</span><span class="second">h</span>ab
+							</span> <!--main-->
+							
+							<span class="secondary">
+                                <span class="first">d</span>
+                                <span class="second">i</span>
+                                <span class="third">z</span>
+                                <span class="fourth"></span>
+                            </span> <!--secondary-->
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div> <!--header-wrapper-->
+	
+	
+	
+	<div class="menubar">
+	
+        <div id="menu_container">
+	
+
+			<a id="logo" href="#">
+			<!--	<img src="images/shabdiz.jpg" />  -->
+				<img src="images/logo1.png" />
+				<h2>پیتزا شبدیز</h2>
+				<div>پیتزا، ساندویچ، خوراک، سالاد فصل</div>
+			</a>
+
+		
+            <div id="main_menu" class="original">
+			
+				<div id="minimize">-</div>
+				
+                <ul class="menu">
+				
+                    <li class="no_submenu" id="color1">
+						<a href="index.html" id="firstlink">
+							<div class="over1"></div>
+							<div class="over2"></div>
+							<div class="over3"></div>
+							<div class="over4"></div>
+							<span>صفحه اصلی</span>
+						</a>
+					</li>
+                    <li class="no_submenu" id="color2">
+						<a href="#">
+							<div class="over1"></div>
+							<div class="over2"></div>
+							<div class="over3"></div>
+							<div class="over4"></div>
+							<span>درباره ما</span>
+						</a>
+					</li>
+
+                    <li id="color3">
+                        <a href="gallery.html" target="_blank">
+							<div class="over1"></div>
+							<div class="over2"></div>
+							<div class="over3"></div>
+							<div class="over4"></div>
+							<span>منو ی غذا</span>
+						</a>
+                        <ul class="submenu">
+						
+                            <li><a href="#">پیتزا ها</a></li>
+                            <li><a href="#">ساندویچ ها</a></li>                            
+                            <li><a href="#">خوراک ها</a></li>
+							<li><a href="#">پیش غذاها</a></li>
+                            <li><a href="#">نوشیدنی ها</a></li>
+                
+                        </ul>
+                    </li>
+
+                    <li id="color4">
+                        <a href="03.htm" target="_blank">
+							<div class="over1"></div>
+							<div class="over2"></div>
+							<div class="over3"></div>
+							<div class="over4"></div>
+							<span>اخبار</span>
+						</a>
+                        <ul class="submenu">
+                            <li><a href="#">موضوع 1</a></li>
+                            <li><a href="#">موضوع 2</a></li>
+                            <li><a href="#">موضوع 3</a></li>
+                            <li><a href="#">موضوع 4</a></li>
+                        </ul>
+                    </li>
+
+                    <li id="color5">
+                        <a href="">
+							<div class="over1"></div>
+							<div class="over2"></div>
+							<div class="over3"></div>
+							<div class="over4"></div>
+							<span>گالری تصاویر</span>	
+						</a>
+                        <ul class="submenu">
+                            <li><a href="#">گالری 1</a></li>
+                            <li><a href="#">گالری 2</a></li>
+                            <li><a href="#">گالری 3</a></li>
+                            <li><a href="#">گالری 4</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="no_submenu" id="color6">
+						<a href="">
+							<div class="over1"></div>
+							<div class="over2"></div>
+							<div class="over3"></div>
+							<div class="over4"></div>
+							<span>تماس با ما</span>	
+						</a>
+					</li>
+
+                </ul>  <!--menu-->
+				
+            </div> <!--main_menu-->
+			
+			
+        </div> <!--menu_container-->
+	</div> <!--menubar-->
+		
+	
+	
+		
+</div> <!--header-->
+
+<div id="body">
+
+<div id="container">
+
+	<div id="accardion">
+	
+		<div class="section">
+		
+			<input type="radio" id="rad1" name="r"  />
+			<label for="rad1" class="tab hide">انواع پیتزا<div>انواع پیتزا</div></label>
+			
+			<div class="content">
+				<div class="items hide">
+					<h2 id="food_name">پیتزا مخصوص شبدیز</h2>
+						<div>
+							<img src="images/best05.jpg" />
+						</div>
+						<div id="description">
+							<p id="describe">ژامبون گوشت، گوشت چرخ کرده، سوسیس، قارچ، ذرت، فلفل سبز و پنیر مخصوص</p>
+							<span id="food_price">13000 تومان</span>
+						</div>
+				</div>
+
+			
+			<div class="items hide">
+					<h2 id="food_name">پیتزا مخلوط</h2>
+						<div>
+							<img src="images/040.jpeg" />
+						</div>
+						<div id="describe">
+							<p>مارتا، گوشت چرخ کرده، سوسیس، قارچ، فلفل سبز و پنیر مخصوص</p>
+							<span id="food_price">12000 تومان</span>
+						</div>
+				</div>
+
+			
+			<div class="items hide">
+					<h2 id="food_name">پیتزا مرغ و قارچ</h2>
+						<div>
+							<img src="images/best06.jpg" />
+						</div>
+						<div>
+							<p id="describe">مرغ، قارچ، ذرت، فلفل سبز و پنیر مخصوص</p>
+							<span id="food_price">13000 تومان</span>
+						</div>
+				</div>
+
+			
+			<div class="items hide">
+					<h2 id="food_name">پیتزا زبان ویژه شبدیز</h2>
+						<div>
+							<img src="images/best05.jpg" />
+						</div>
+						<div>
+							<p id="describe">زبان، قارچ، پیاز، ذرت، زیتون، فلفل سبز و پنیر مخصوص</p>
+							<span id="food_price">17000 تومان</span>
+						</div>
+				</div>
+
+			</div> <!--content-->
+		
+		</div> <!--section-->
+		
+		<div class="section">
+		
+			<input type="radio" id="rad2" name="r" />
+			<label for="rad2" class="tab hide">انواع ساندویچ<div>انواع ساندویچ</div></label>
+			
+			<div class="content">
+				
+				<div class="items hide">
+					<h2 id="food_name">پیتزا مخصوص شبدیز</h2>
+						<div>
+							<img src="images/best05.jpg" />
+						</div>
+						<div id="description">
+							<p id="describe">ژامبون گوشت، گوشت چرخ کرده، سوسیس، قارچ، ذرت، فلفل سبز و پنیر مخصوص</p>
+							<span id="food_price">13000 تومان</span>
+						</div>
+				</div>
+
+			
+			<div class="items hide">
+					<h2 id="food_name">پیتزا مخلوط</h2>
+						<div>
+							<img src="images/040.jpeg" />
+						</div>
+						<div id="describe">
+							<p>مارتا، گوشت چرخ کرده، سوسیس، قارچ، فلفل سبز و پنیر مخصوص</p>
+							<span id="food_price">12000 تومان</span>
+						</div>
+				</div>
+
+			
+			<div class="items hide">
+					<h2 id="food_name">پیتزا مرغ و قارچ</h2>
+						<div>
+							<img src="images/best06.jpg" />
+						</div>
+						<div>
+							<p id="describe">مرغ، قارچ، ذرت، فلفل سبز و پنیر مخصوص</p>
+							<span id="food_price">13000 تومان</span>
+						</div>
+				</div>
+
+
+			</div>
+		
+		</div> <!--section-->
+		
+		<div class="section">
+		
+			<input type="radio" id="rad3" name="r" />
+			<label for="rad3" class="tab hide">انواع خوراک<div>انواع خوراک</div></label>
+			
+			<div class="content">
+			
+			</div>
+		
+		</div> <!--section-->
+
+		<div class="section">
+		
+			<input type="radio" id="rad4" name="r" />
+			<label for="rad4" class="tab hide">انواع پیش غذا<div>انواع پیش غذا</div></label>
+			
+			<div class="content">
+			
+			</div>
+		
+		</div> <!--section-->
+		
+		<div class="section">
+		
+			<input type="radio" id="rad5" name="r" />
+			<label for="rad5" class="tab hide">انواع نوشیدنی<div>انواع نوشیدنی</div></label>
+			
+			<div class="content">
+			
+			</div>
+		
+		</div> <!--section-->
+		
+		
+	
+	</div> <!--accardion-->
+	
+</div> <!--container-->
+
+
+
+</div> <!--body-->
+
+<div id="footer">
+
+	<div id="footer_container">
+		
+		<div class="col">
+			<p id="tel">شماره تماس:</p>
+			<p>0112 52 65 542</p>
+			<p>0937 081 4027</p>
+		</div>
+		
+		
+		<div class="col">
+			<div id="follow">
+				<p id="mail">ایمیل:</p>
+				<p>pizzashabdiz@yahoo.com</p>
+			</div>
+			
+			<ul id="social" class="first">
+				
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>			
+			</ul>
+		</div>
+		
+		
+		<div class="col">
+			<p id="address">آدرس:</p>
+			<p>بابلسر، خیابان شهید رجایی، بعد از میدان شهرداری (ساعت)، جنب گل فروشی گل مریم</p>
+		</div>
+		
+	</div> <!--footer_container-->
+	
+	<div id="copyright">تمامی حقوق این سایت محفوظ است.&copy; 2014<br>طراح سایت: فاطمه صوری</div>
+
+</div>  <!--footer-->
+
+
+
+    <script>
+	
+			
+        tabs = $('#accardion .tab');
+
+        function show_tabs(k) {
+          
+            //tabs[k].className = tabs[k].className.replace('hide', 'show');
+			//$(tabs[k]).removeClass('hide').addClass('show');
+			$(tabs[k]).animate({marginTop:'8px'},500).animate({borderRadius:'5px'},500);
+
+        }
+
+        for (k = 0; k < tabs.length; k++) {
+         
+            setTimeout('show_tabs(' + k + ')', k * 600);
+			
+        }
+
+
+
+
+
+
+
+
+        items = document.getElementsByClassName('items');
+
+        function show_it(i) {
+          
+            items[i].className = items[i].className.replace('hide', 'show');
+
+        };
+
+        for (i = 0; i < items.length; i++) {
+         
+            setTimeout('show_it(' + i + ')', i * 300);
+
+        }
+
+
+
+		
+		
+		
+		
+		$('#accardion input[id*=rad]').change(function (){		
+	
+			$('.items:nth-child(2n)').css({marginLeft:'-1000px'});
+			$('.items:nth-child(2n+1)').css({marginRight:'-1000px'});
+			
+			for (j = 0; j < 4; j++)
+			{
+				if ($('#accardion input#rad' + j).is(':checked')== true)
+				{
+					$('#accardion input#rad' + j + ':checked ~ .content > .items:nth-child(2n)').animate({marginLeft:'6px'}, 1500);
+					$('#accardion input#rad' + j + ':checked ~ .content > .items:nth-child(2n+1)').animate({marginRight:'6px'}, 1500);
+					
+							
+				}
+				else if($('#accardion input#rad' + j).is(':checked')== false)
+				{
+				
+					$('#accardion input#rad' + j + ' ~ .content > .items:nth-child(2n)').animate({marginLeft:'-1000px'}, 1000);
+					$('#accardion input#rad' + j + ' ~ .content > .items:nth-child(2n+1)').animate({marginRight:'-1000px'}, 1000);
+					
+				}
+
+			}	
+			
+		});
+
+		
+		
+    </script>
+
+</body>
