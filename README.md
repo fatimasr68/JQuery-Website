@@ -3,5 +3,5 @@
 ### this is my first website in 2014
 
 * Due: 2014
-* [link of website](https://fatimasr68.github.io/JQuery-Website/)
+* [Here is the link to the website](https://fatimasr68.github.io/JQuery-Website/)
 
