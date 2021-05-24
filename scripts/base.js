@@ -17,7 +17,7 @@ $(document).ready(function(){
 									
 			$('#main_menu.scrolled .menu').animate({height:'0px', opacity:'0'}, 900);
 			$('#minimize').animate({bottom:'-18px', opacity:'1'}, 600)
-						  .css({fontSize:'14px', boxShadow:'0px 0px 2px 2px #ccc'})
+						  .css({fontSize:'14px'})
 						  .html('+');
 						  
 						  
@@ -27,7 +27,7 @@ $(document).ready(function(){
 		else if( flag == 0)
 		{
 			$('#main_menu.scrolled').animate({height:'100px'}, 300)
-									.css({border:'1px solid #eee', boxShadow:' 0 0 3px 2px #ccc inset, 0 0 2px 2px #ccc'});
+									.css({border:'1px solid #eee'});
 			$('#main_menu.scrolled .menu').animate({height:'100px', opacity:'1'}, 900);
 			$('#main_menu.scrolled li').css({display:'block'});
 			$('#minimize').animate({bottom:'2px', opacity:'1'}, 600)
@@ -55,7 +55,7 @@ $(window).scroll( function() {
 		$('#main_menu').removeClass('original');
 		$('#main_menu').addClass('scrolled');
 		$('#main_menu').css({top:$(window).scrollTop() - 141 });
-		$('#main_menu.scrolled').css({border:'1px solid #eee', boxShadow:' 0 0 3px 2px #ccc inset, 0 0 2px 2px #ccc'});
+		$('#main_menu.scrolled').css({border:'1px solid #eee'});
 	}
 	else
 	{
@@ -68,7 +68,7 @@ $(window).scroll( function() {
 		//$('#main_menu').css({ boxShadow:' -1px -1px 5px 1px #E6E6E6'});
 		$('#main_menu li').css({display:'block'});
 
-		$('#minimize').css({bottom:'2px', opacity:'1', fontSize:'18px', boxShadow:'1px -1px 2px 1px #eee'})
+		$('#minimize').css({bottom:'2px', opacity:'1', fontSize:'18px'})
 					  .html('-');
 					  
 		flag = 1;			  
