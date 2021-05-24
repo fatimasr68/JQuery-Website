@@ -1,1 +1,1 @@
-# JQuery-Website witn css3 animations
+# JQuery-Website witn CSS3 animations
