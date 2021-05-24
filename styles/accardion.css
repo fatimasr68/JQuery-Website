@@ -1,0 +1,175 @@
+#accardion h1{margin:0;}
+a {
+	text-decoration: none;
+}
+#accardion {
+	width: 800px;
+	//background: #fff;;
+	padding: 5px;
+	margin: auto;
+	border-radius: 3px;
+	//box-shadow: 0 0 10px 2px #ccc, 0 0 10px 3px #888 inset;
+	//border: 3px double #ccc;
+	overflow: hidden;
+}
+
+#accardion > .section {
+	position: relative;
+	width: 30px;
+	height: 330px;
+	//background: -moz-linear-gradient(left , #1A1A1A, #808080, #1A1A1A);
+	background: linear-gradient(to right, #959595 5%, #010101 40%, #0D0D0D 46%, #0A0A0A 47%, #4E4E4E 63%, #383838 86%, #1B1B1B 100%);
+	margin: 5px 5px 5px 0;
+	border-radius: 5px;
+
+	float: right;
+	transition: 1s;	
+	overflow: hidden;
+}
+
+#accardion  h1 {
+	width: 330px;
+	height: 30px;
+	transform: rotate(90deg);
+	transform-origin: 0 0;
+	//margin-left: 30px;
+	position: absolute;
+	left: 30px;
+	transition: 1s;
+}
+
+
+#accardion h1 a{
+	display: block;
+	height: 30px;
+	line-height: 25px;
+	font-size: 16px;
+	font-family: B morvarid;
+	text-indent: 20px;
+	color: #fff;	
+	transition: 1s;
+
+}
+#accardion #sec1 h1 a {
+	//color: #c33;
+}
+#accardion #sec2 h1 a {
+	//color: #FFBF2B;
+}
+#accardion #sec3 h1 a {
+	//color: #FF4D4D;
+}
+#accardion #sec4 h1 a {
+	//color: #9c0;
+}
+#accardion #sec5 h1 a {
+	//color: #9cf;
+}
+
+#accardion > .section:target {
+	width: 640px;
+	background: #fff;
+	box-shadow: 0 0 10px 5px #ccc inset;
+	border-radius: 2px;
+	border: 1px solid #eee;
+}
+
+#accardion > .section:target h1 {
+	//background: -moz-linear-gradient(top , #1A1A1A, #808080, #1A1A1A);
+	background: linear-gradient(#959595 5%, #010101 40%, #0D0D0D 46%, #0A0A0A 47%, #4E4E4E 63%, #383838 86%, #1B1B1B 100%);
+	//margin-left: 38px;	
+	width: 600px;
+	margin-left: -12px;	
+	margin-top: 10px;
+	text-align: center;
+	transform: rotate(0deg);
+	box-shadow: 0 0 10px #ccc;	
+	border: 1px solid #9c0;
+	border-radius: 5px;
+	animation: lightSpeedIn 2s ease-out;
+}
+
+#accardion > .section:target h1 a {
+
+	font-size: 16px;
+	text-indent: 0;
+	color: #9c0;
+}
+
+#accardion .acc_content {
+	display: none;
+	background: #fff;
+	overflow: auto;	
+	//border: 1px solid #eee;	
+	width: 560px;
+	height: 220px;	
+	margin: 50px auto 0px;
+	padding: 20px;
+	transition: 1s;
+	box-shadow: 0 0 5px 1px #D8D8D8;
+	border: 1px solid #eee;
+}
+#accardion .acc_content p {
+	width: 270px;
+	float: right;
+	margin: 0;
+	color: rgba(128,128,128, 1);
+	margin-bottom: 11px;	
+	font-family: myFont;
+	font-size: 14px;
+}
+
+
+#accardion .acc_content .food_menu {
+
+	border-bottom: 1px dotted #eee;
+	width: 248px;
+	height: 30px;
+	line-height: 30px;
+	float: right;
+	color: rgba(128,128,128, 1);
+	margin-bottom: 8px;	
+	font-family: myFont;
+	font-size: 14px;
+	text-indent: 20px;
+	margin-left: 15px;
+}
+#accardion .acc_content .food_menu span:nth-child(1){
+	//border: 1px solid red;
+}
+
+#accardion .acc_content .food_menu span:nth-child(2){
+	float:left;
+	//border: 1px solid red;
+	padding-left: 10px;
+}
+
+#accardion .acc_content p a {
+	color: #36c;
+}
+#accardion > .section:target .acc_content {
+	display: block;
+	animation: flipInX 1s ease-out;	
+	//animation: lightSpeedIn 1s ease-out;	
+}
+@keyframes s0 {
+
+	0% {
+
+	transform:translate(-200px)  scale(0.2) rotateY(360deg);
+	opacity: 0;
+
+	}
+	50% {
+
+	transform:translateZ(100px) scale(1.3) rotateY(0deg);
+	opacity: 1;
+
+	}
+	100% {
+	transform:translate(200px)  scale(0.2) rotateY(360deg);
+	opacity: 0;
+
+	}
+
+}

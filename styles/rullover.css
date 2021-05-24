@@ -1,0 +1,229 @@
+/*
+=rullover
+-------------------------------------------------------------------------------------*/
+
+#ruller {
+	border: 10px solid #fff;
+	//box-shadow: 0 0 5px 2px #eee;
+	position: relative;
+	width: 880px;
+	height: 400px;
+}
+#ruller a {
+
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#ruller > a img {
+	
+	outline: 1px solid #FBFBFB;
+	width: 100%;
+	height: 100%;
+}
+
+#ruller a.show {
+
+	z-index: 50;
+	
+}
+#ruller .caption {
+
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	right: -1000px;
+	z-index: 100;
+	width: 80%;
+	padding: 20px;
+	height: 50px;
+	//background: #000;
+	//background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+	//border-radius: 50% 0% 0% 0%;
+}
+
+#ruller .caption .des {
+
+	margin: 0px auto;
+	text-align: center;
+	color: #fff;
+	color: #A0A0A0;
+	//line-height: 40px;
+	font-family: B morvarid;
+	font-size: 16px;
+}
+
+@font-face {
+
+	src: url(font/nasim.ttf);
+	font-family: nasim;
+}
+
+
+#ruller .panel {
+
+	z-index: 200;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#ruller .alt {
+
+	cursor: pointer;
+	transition: 0.6s;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	border: 3px solid  rgba(255,255,255,0.7);
+	margin: 190px auto;
+	background: url('../icons/play.png') rgba(150,150,150,0.7);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+#ruller .panel:hover .alt {
+
+	opacity: 1;
+
+}
+
+
+#ruller .l_but, #ruller .r_but {
+
+	position: absolute;
+	top: 190px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+#ruller .l_but:hover {
+
+	opacity: 1;
+}
+#ruller .r_but:hover {
+
+	opacity: 1;
+}
+
+
+#ruller .l_but {
+
+	background: url('../images/prev1.png');
+	background-size: 100% 100%;
+	left: 20px;
+	opacity: 0.8;
+}
+
+#ruller .r_but {
+
+	background: url('../images/prev4.png');
+	background-size: 100% 100%;
+	right: 20px;
+	opacity: 0.8;
+}
+
+/*--------------------------------------- ruller thumbs -----------------------------------------*/
+.gallery {
+	
+	width: 100%;
+    height: 520px;
+	margin: 0 auto;
+    //background: -moz-linear-gradient(center top , #E6E6E6, #FFF, #FFF, #FFF);
+    border: solid 1px #ECECEC;
+	position: relative;
+}
+.gallery_content {
+
+	width: 100%;
+	height: 90px;
+	padding-top: 10px;
+    background: linear-gradient(center top , #E6E6E6, #FFF, #FFF, #E6E6E6);
+    background: -moz-linear-gradient(center top , #E6E6E6, #FFF, #FFF, #E6E6E6);
+    background: -ms-linear-gradient(center top , #E6E6E6, #FFF, #FFF, #E6E6E6);
+    background: -webkit-linear-gradient(#E6E6E6, #FFF, #FFF, #E6E6E6);
+	//background: -moz-linear-gradient(center top , #FFF, #D9D9D9);
+}
+.gallery_images{
+
+	width: 550px;
+	height: 70px;
+	margin: auto;
+	padding-right: 52.5px;
+	padding-top: 7px;
+	padding-bottom: 2px;
+	border-top: 1px solid #D9D9D9;
+	background: linear-gradient(right center , transparent, #FFF, transparent);
+	background: -moz-linear-gradient(right center , transparent, #FFF, transparent);
+	background: -webkit-linear-gradient(right, transparent, #FFF, transparent);
+}
+.gallery_images ul {
+	float: right;
+	//width: 100%;
+}
+
+.gallery_images ul li {
+	position: relative;
+	width: 80px;
+	height: 70px;
+	float: right;
+	list-style: none;
+	padding-left: 3px;
+}
+.gallery_images img {
+	float: right;
+	width: 75px;
+	height: 60px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	border-color: linear-gradient(right center , transparent, #9c0, transparent);
+	
+	background: #FFF;
+	opacity: 0.8;
+	transition: 0.6s;
+}
+.gallery_images img:hover {
+	opacity: 1;
+	border-color: #B8DB4D;
+	box-shadow: 0px 0px 10px 2px #fff;
+}
+
+.info{
+	transition: 0.6s;
+	position:absolute;
+	bottom: 150px;
+	opacity: 0;
+    visibility: hidden;
+	z-index: 300;
+}
+
+.infoimg{
+	background: url('../images/info.png')no-repeat;
+	background-position: right;
+	height: 10px;
+
+}
+
+.infotxt{
+	background: linear-gradient(#000 0%, #555 40%, #000 100%);
+	border-radius: 5px 5px 5px 5px;
+	color: #B8DB4D;
+	box-shadow: 0 0 5px black;
+	width: 80px;	
+	min-height: 50px;
+	font-family: homa;
+	font-size: 12px;
+	text-align: center;
+}
+.gallery_images ul li:hover .info{
+    visibility: visible;
+    opacity: 0.9;
+	bottom: 70px;
+	animation: rollIn2 1s ease-out;	
+
+}
+	

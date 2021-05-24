@@ -1,0 +1,145 @@
+@font-face {
+	font-family: Ultra;
+	src: url("../font/Ultra.ttf");
+}
+
+#header .header-wrapper {
+	width: 100%;
+	direction: ltr;
+    padding-bottom: 5px;
+    padding-top: 50px;
+	background: #1b1b1b;
+}
+*{
+    vertical-align: top;
+	margin: 0px;
+    padding: 0px;
+
+}
+#header {
+    text-align: center;
+}
+
+.container:after {
+    //clear: both;
+}
+.container:before, .container:after {
+    //display: table;
+    //content: "";
+    //line-height: 0;
+}
+.container {
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.row:after {
+    //clear: both;
+}
+.row:before, .row:after {
+    display: table;
+    content: "";
+    //line-height: 0;
+}
+.row {
+
+	//margin-right: 70px;
+	margin-right: 35%;
+}
+
+@keyframes flipInX2 {
+    0% {
+        transform: perspective(400px) rotateX(90deg);  /* 90deg */
+        opacity: 1;
+    }
+    
+    40% {
+        transform: perspective(400px) rotateX(-30deg);
+    }
+    
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+
+.grid_12 {
+
+    width: 100%;
+    //float: left;
+    min-height: 1px;
+    margin-left: 30px;
+	//animation: flipInX2 3s ease-in-out  infinite;
+	animation-fill-mode: backwards;
+
+}
+
+
+#header h1 {
+    display: inline-block;
+}
+
+#header h1 a {
+    display: block;
+}
+
+
+#header h1 .main {
+
+    //font: 400 114px/70px "Ultra",sans-serif;
+	font-family: Ultra;
+	font-size: 114px;
+	line-height: 40px;
+	font-weight: 400;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: -2px;
+    display: inline-block;
+	text-shadow: 4px 4px 2px #9c0;
+}
+
+#header h1 .secondary {
+
+    //font: 400 71px/102px "Ultra",sans-serif;
+	font-family: Ultra;
+	font-size: 71px;
+	font-weight: 400;
+	line-height: 85px;
+	
+    text-transform: uppercase;
+    letter-spacing: -12px;
+    margin-left: -10px;
+	text-shadow: 2px 2px 2px #fff;
+}
+
+#header h1 .main .first {
+    letter-spacing: -8px;
+}
+
+#header h1 .main .second {
+
+   letter-spacing: -1px;
+}
+
+#header h1 .secondary .first {
+    color: #63A037;
+    color: #A3D119;
+}
+
+#header h1 .secondary .second {
+    color: #FA751E;
+}
+
+#header h1 .secondary .third {
+    color: #FCC30C;
+}
+
+#header h1 .secondary .fourth {
+    color: #72286D;
+}
