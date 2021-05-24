@@ -8,25 +8,20 @@
 }
 
 @font-face {
-	font-family: tabasom;
-	src: url("../font/tabasom.ttf");
-}
-
-@font-face {
-	src: url("../font/Mj flow.ttf");
 	font-family: mjFlow;
-}
-@font-face {
 	src: url("../font/Mj flow.ttf");
+}
+@font-face {
 	font-family: myFont;
+	src: url("../font/Mj flow.ttf");
 }
 @font-face {
-	src: url("../font/tabasom.ttf");
 	font-family: tabasom;
+	src: url("../font/Tabasom.ttf");
 }
 @font-face {
-	src: url("../font/nasim.ttf");
 	font-family: nasim;
+	src: url("../font/nasim.ttf");
 }
 
 @keyframes rollIn {
