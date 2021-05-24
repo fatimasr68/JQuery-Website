@@ -6,6 +6,5 @@
 
 * Due: 2014
 * Non-Responsive
-* Hover elements to see animations
 * [Here is the link to the website](https://fatimasr68.github.io/JQuery-Website/)
 
